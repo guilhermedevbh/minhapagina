@@ -73,7 +73,7 @@ main,footer{position:relative;z-index:1}
 .progress span{display:block;height:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--accent)}
 body.playing .top{opacity:0;pointer-events:none}
 @media (max-width:1080px){.nav{gap:16px}.nav a{font-size:14px}}
-@media (max-width:960px){.nav{display:none}.btn-mini{margin-left:auto}}
+@media (max-width:1040px){.nav{display:none}.btn-mini{margin-left:auto}}
 
 /* ---------- hero ---------- */
 .hero{padding-block:clamp(32px,6vw,72px) clamp(72px,8vw,112px)}
@@ -244,6 +244,22 @@ h3{text-wrap:balance}
 .feat li::before{content:"";position:absolute;left:0;top:.5em;width:7px;height:7px;background:var(--accent)}
 @media (max-width:700px){.proj-row,.feat{grid-template-columns:minmax(0,1fr)}}
 
+/* formação e certificados */
+.edu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:32px}
+.edu-card{padding:22px 34px 24px}
+.edu-card h3{margin:6px 0 2px;font-size:20px;line-height:1.25}
+.edu-card .org{margin:0}
+.cert-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start;margin-top:20px}
+.cert-group{padding:24px 34px 26px}
+.cert-group h3{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:0 0 12px;font-size:20px;line-height:1.25}
+.cert-group h3 span{flex:none;font-family:var(--f-label);font-size:11px;font-weight:400;letter-spacing:.08em;color:var(--coin)}
+.certs{list-style:none;margin:0;padding:0;display:grid}
+.certs li{display:grid;gap:1px;padding:10px 0;border-top:1px solid var(--line)}
+.certs li:first-child{border-top:0;padding-top:0}
+.certs b{font-weight:600;font-size:15.5px;line-height:1.35}
+.certs span{font-size:13.5px;color:var(--muted)}
+@media (max-width:760px){.edu,.cert-groups{grid-template-columns:minmax(0,1fr)}}
+
 /* contato */
 .contact{display:grid;gap:14px;max-width:780px;margin-top:32px}
 .contact-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:16px;padding:18px 32px;text-decoration:none}
@@ -368,6 +384,7 @@ body.has-pad #hint,body.has-pad #skillbar{display:none!important}
       <a href="#metodo">Método</a>
       <a href="#inventario">Inventário</a>
       <a href="#projetos">Projetos</a>
+      <a href="#certificados">Certificados</a>
       <a href="#contato">Contato</a>
     </nav>
     <button class="btn-mini" id="playTop" type="button">▶ JOGAR</button>
@@ -416,7 +433,8 @@ body.has-pad #hint,body.has-pad #skillbar{display:none!important}
             <li><a href="#metodo"><span>4</span>Método</a></li>
             <li><a href="#inventario"><span>5</span>Inventário</a></li>
             <li><a href="#projetos"><span>6</span>Projetos</a></li>
-            <li><a href="#contato"><span>7</span>Contato</a></li>
+            <li><a href="#certificados"><span>7</span>Certificados</a></li>
+            <li><a href="#contato"><span>8</span>Contato</a></li>
           </ol>
         </nav>
       </div>
@@ -451,10 +469,10 @@ body.has-pad #hint,body.has-pad #skillbar{display:none!important}
         </figure>
       </div>
       <dl class="tiles">
-        <div class="tile slant hov" data-plat style="--y:0px"><dt>FORMAÇÃO</dt><dd>Administração, e graduando em Ciências Contábeis na Estácio</dd></div>
+        <div class="tile slant hov" data-plat style="--y:0px"><dt>FORMAÇÃO</dt><dd>Bacharel em Administração e graduando em Ciências Contábeis, Estácio</dd></div>
         <div class="tile slant hov" data-plat style="--y:32px"><dt>CARGO ATUAL</dt><dd>Analista Fiscal, Grupo Emtel</dd></div>
         <div class="tile slant hov" data-plat style="--y:64px"><dt>SISTEMAS</dt><dd>SAP, TOTVS RM/Protheus, Omie e Excel</dd></div>
-        <div class="tile slant hov" data-plat data-trofeu="Certificações CEFIS e Udemy" style="--y:32px"><dt>CERTIFICAÇÕES</dt><dd>CEFIS, Udemy e Scrum Fundamentals (SFC™)</dd></div>
+        <div class="tile slant hov" data-plat style="--y:32px"><dt>CERTIFICAÇÕES</dt><dd>16 certificados em fiscal, financeiro e gestão ágil</dd></div>
         <div class="tile slant hov" data-plat style="--y:0px"><dt>CLASSE</dt><dd>Vibe coder, com sistemas integrados com IA</dd></div>
       </dl>
     </div>
@@ -679,13 +697,67 @@ body.has-pad #hint,body.has-pad #skillbar{display:none!important}
     </div>
   </section>
 
-  <section class="level" id="contato">
-    <div class="floor" style="--split:30%" aria-hidden="true"><i data-plat></i><i data-plat></i><b class="hole"></b></div>
+  <section class="level" id="certificados">
+    <div class="floor" style="--split:52%" aria-hidden="true"><i data-plat></i><i data-plat></i><b class="hole"></b></div>
     <span class="bignum" aria-hidden="true">7</span>
     <div class="wrap">
       <div class="lvl-head">
         <span class="block" aria-hidden="true">7</span>
-        <div><p class="eyebrow">FASE 7</p><h2 data-plat="text" data-letters>Vamos conversar</h2></div>
+        <div><p class="eyebrow">FASE 7</p><h2 data-plat="text" data-letters>Formação e certificados</h2></div>
+      </div>
+      <div class="prose">
+        <p class="lead">Minha formação junta administração e contabilidade, e os certificados cobrem a rotina fiscal, a área financeira e a gestão ágil.</p>
+      </div>
+      <div class="edu">
+        <article class="edu-card slant hov" data-plat>
+          <p class="when">2021 – 2024</p>
+          <h3>Bacharelado em Administração</h3>
+          <p class="org">Estácio</p>
+        </article>
+        <article class="edu-card slant hov" data-plat>
+          <p class="when">AGO 2024 – HOJE · EM ANDAMENTO</p>
+          <h3>Ciências Contábeis</h3>
+          <p class="org">Estácio</p>
+        </article>
+      </div>
+      <div class="cert-groups">
+        <article class="cert-group slant hov" data-plat data-trofeu="Certificados fiscais">
+          <h3>Fiscal e financeiro <span>7 CERTIFICADOS</span></h3>
+          <ul class="certs">
+            <li><b>Simples Nacional</b><span>CEFIS · ago. 2024</span></li>
+            <li><b>EFC 2024</b><span>CEFIS · ago. 2024</span></li>
+            <li><b>Faturamento e Emissão de Notas Fiscais</b><span>CEFIS · ago. 2024</span></li>
+            <li><b>Imposto Sobre Serviços (ISS)</b><span>CEFIS · jun. 2024</span></li>
+            <li><b>Retenções Tributárias na Fonte (ISS, IRRF, CSRF e INSS)</b><span>CEFIS · jun. 2024</span></li>
+            <li><b>Analista Fiscal: Impostos Diretos e Indiretos</b><span>Udemy · mai. 2024</span></li>
+            <li><b>Analista Financeiro</b><span>Desenvolve Cursos · jul. 2023</span></li>
+          </ul>
+        </article>
+        <article class="cert-group slant hov" data-plat data-glitch data-trofeu="Certificados em gestão ágil">
+          <h3>Gestão ágil <span>9 CERTIFICADOS</span></h3>
+          <ul class="certs">
+            <li><b>Scrum e Kanban na Prática</b><span>UNIAGIL · jun. 2023</span></li>
+            <li><b>Como Construir Backlog Eficiente</b><span>Udemy · jan. 2023</span></li>
+            <li><b>Agile Project Management com Scrum</b><span>Massimus · dez. 2022</span></li>
+            <li><b>Gestão Ágil no Trabalho: Como Criar Equipes Ágeis</b><span>Project Management Institute · out. 2022</span></li>
+            <li><b>Lean Agile Coach Professional (LACP)</b><span>UNIAGIL · out. 2022</span></li>
+            <li><b>Rodá Ágil (RAP)</b><span>UNIAGIL · set. 2022</span></li>
+            <li><b>Scrum Fundamentals Certified (SFC™)</b><span>VMEdu · set. 2022</span></li>
+            <li><b>Introdução Management 3.0</b><span>Management 3.0 · set. 2022</span></li>
+            <li><b>Management 3.0</b><span>Udemy · set. 2022</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="level" id="contato">
+    <div class="floor" style="--split:30%" aria-hidden="true"><i data-plat></i><i data-plat></i><b class="hole"></b></div>
+    <span class="bignum" aria-hidden="true">8</span>
+    <div class="wrap">
+      <div class="lvl-head">
+        <span class="block" aria-hidden="true">8</span>
+        <div><p class="eyebrow">FASE 8</p><h2 data-plat="text" data-letters>Vamos conversar</h2></div>
       </div>
       <div class="prose">
         <p class="lead">Quer conversar sobre a área fiscal, automação ou um sistema com IA? Me chama no LinkedIn ou por e-mail.</p>
@@ -1086,7 +1158,7 @@ body.has-pad #hint,body.has-pad #skillbar{display:none!important}
   }
 
   /* ---------- conteúdo que surge ao rolar ---------- */
-  const revEls = Array.from(document.querySelectorAll('.hero-grid > div, .map, .hero-meta, .lvl-head, .prose > p, .player, .tile, .exp, .card, .term, .steps li, .slot, .proj, .contact-row'));
+  const revEls = Array.from(document.querySelectorAll('.hero-grid > div, .map, .hero-meta, .lvl-head, .prose > p, .player, .tile, .exp, .card, .term, .steps li, .slot, .proj, .edu-card, .cert-group, .contact-row'));
   if (!reduce && 'IntersectionObserver' in window) {
     root.classList.add('js');
     const seen = new Map();
@@ -1353,7 +1425,7 @@ body.has-pad #hint,body.has-pad #skillbar{display:none!important}
   const GRAV = 2100, JUMP = 780, SPEED = 280, MAXFALL = 1150, POUND = 1250;
   const PTS = { bit: 10, skill: 100, trophy: 500, bug: 50, glitch: 75, cafe: 25 };
   const SKILLS = ['ISS', 'INSS', 'IR', 'PIS/COFINS', 'NF-e', 'NFS-e', 'CT-e', 'SEFAZ', 'CBS/IBS', 'Excel', 'Python', 'JavaScript', 'SQL', 'SAP', 'TOTVS', 'Omie', 'IA', 'Claude Code'];
-  const PHASES = ['INÍCIO', 'PERFIL', 'TRAJETÓRIA', 'VIBE CODE', 'MÉTODO', 'INVENTÁRIO', 'PROJETOS', 'CONTATO'];
+  const PHASES = ['INÍCIO', 'PERFIL', 'TRAJETÓRIA', 'VIBE CODE', 'MÉTODO', 'INVENTÁRIO', 'PROJETOS', 'CERTIFICADOS', 'CONTATO'];
   const ui = {
     hud: $('gameHud'), hearts: $('hearts'), timer: $('timer'), score: $('score'), bits: $('bitCount'),
     skills: $('skillCount'), trophies: $('trophyCount'), phase: $('phaseName'), depth: $('depth'),
