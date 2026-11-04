@@ -618,6 +618,45 @@ strong { color: var(--text); font-weight: 600; }
 .mission-foot svg { width: 14px; height: 14px; }
 .mission-foot a { color: var(--soft); transition: color .2s; }
 .mission-foot a:hover { color: var(--accent); }
+.mission-foot .state { color: var(--accent); }
+
+/* missão em andamento, em destaque */
+.mission.is-featured { grid-column: 1 / -1; border-color: var(--line-2); }
+.mission.is-featured .mission-art { height: 110px; }
+.mission.is-featured .mission-chip { color: var(--accent-ink); background: var(--accent); border-color: var(--accent); }
+.mission-sub { margin: -4px 0 14px; font-family: var(--f-mono); font-size: 13px; color: var(--soft); }
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 40px;
+  margin: 22px 0 20px;
+}
+.feature-grid h4 {
+  margin: 0 0 12px;
+  font-family: var(--f-pixel);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.feature-grid h4.feature-gap { margin-top: 22px; }
+.feature-grid .loot-list { margin: 0; }
+.loot-list b { color: var(--text); font-weight: 600; }
+.formula {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 12px;
+  font-family: var(--f-mono);
+  font-size: 11px;
+}
+.formula span { padding: 4px 8px; color: var(--accent); background: var(--card-2); border: 1px solid var(--line-2); }
+.formula i { font-style: normal; color: var(--dim); }
+@media (max-width: 900px) {
+  .feature-grid { grid-template-columns: 1fr; }
+}
 
 /* modo lista */
 .missions.is-list { grid-template-columns: 1fr; }
