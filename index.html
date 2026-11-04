@@ -510,10 +510,19 @@
             <input id="f-nome" name="nome" type="text" placeholder="seu nome" autocomplete="name">
             <label for="f-msg">mensagem</label>
             <textarea id="f-msg" name="mensagem" rows="7" placeholder="conta o que você precisa…" required></textarea>
-            <button type="submit">enviar
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 11 21 3l-8 18-2-8z"/></svg>
-            </button>
-            <p class="term-note" aria-live="polite">abre o seu app de e-mail com a mensagem pronta</p>
+            <p class="send-label">enviar por</p>
+            <div class="send-opts">
+              <button type="submit" data-via="gmail">gmail
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 11 21 3l-8 18-2-8z"/></svg>
+              </button>
+              <button type="submit" data-via="outlook">outlook
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 11 21 3l-8 18-2-8z"/></svg>
+              </button>
+              <button type="submit" data-via="app">app de e-mail
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 11 21 3l-8 18-2-8z"/></svg>
+              </button>
+            </div>
+            <p class="term-note" aria-live="polite">abre o gmail, o outlook ou o app de e-mail do celular (iphone e android) com a mensagem pronta</p>
           </form>
 
           <div class="contact-col">

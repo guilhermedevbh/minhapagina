@@ -138,8 +138,9 @@ const GITHUB_USER = "guilhermedevbh";
     })
   );
 
-  /* ---------- Formulário: abre o e-mail com a mensagem pronta ---------- */
+  /* ---------- Formulário: abre o Gmail, o Outlook ou o app de e-mail com a mensagem pronta ---------- */
   const form = $(".term");
+  const EMAIL = "gfernandesouza@gmail.com";
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const nome = form.nome.value.trim();
@@ -150,10 +151,21 @@ const GITHUB_USER = "guilhermedevbh";
       return;
     }
     form.mensagem.classList.remove("is-error");
-    const subject = `Contato pelo portfólio${nome ? ` · ${nome}` : ""}`;
-    const body = `${msg}${nome ? `\n\n${nome}` : ""}`;
-    location.href = `mailto:gfernandesouza@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    $(".term-note").textContent = "abrindo o seu app de e-mail…";
+    const subject = encodeURIComponent(`Contato pelo portfólio${nome ? ` · ${nome}` : ""}`);
+    const body = encodeURIComponent(`${msg}${nome ? `\n\n${nome}` : ""}`);
+    const to = encodeURIComponent(EMAIL);
+    const via = (e.submitter && e.submitter.dataset.via) || "app";
+    const web = {
+      gmail: `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`,
+      outlook: `https://outlook.live.com/mail/0/deeplink/compose?to=${to}&subject=${subject}&body=${body}`,
+    };
+    if (web[via]) {
+      window.open(web[via], "_blank", "noopener");
+      $(".term-note").textContent = `abrindo o ${via} em uma nova aba…`;
+    } else {
+      location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+      $(".term-note").textContent = "abrindo o seu app de e-mail…";
+    }
   });
 
   /* ---------- Roda algo só enquanto está na tela ---------- */

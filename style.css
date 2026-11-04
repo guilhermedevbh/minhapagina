@@ -960,6 +960,22 @@ strong { color: var(--text); font-weight: 600; }
 }
 .term button:hover { background: var(--accent-2); }
 .term button svg { width: 15px; height: 15px; }
+.send-label {
+  margin: 0 0 6px;
+  font-family: var(--f-pixel);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--accent);
+}
+.send-opts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+@media (max-width: 420px) {
+  .send-opts { grid-template-columns: 1fr; }
+}
 .term-note { margin-top: 10px; font-family: var(--f-mono); font-size: 11px; color: var(--dim); text-align: center; }
 
 .socials { display: grid; }
