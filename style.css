@@ -973,6 +973,7 @@ strong { color: var(--text); font-weight: 600; }
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
+.send-opts button { padding: 12px 8px; white-space: nowrap; }
 @media (max-width: 420px) {
   .send-opts { grid-template-columns: 1fr; }
 }
