@@ -619,6 +619,7 @@ strong { color: var(--text); font-weight: 600; }
 .mission-foot a { color: var(--soft); transition: color .2s; }
 .mission-foot a:hover { color: var(--accent); }
 .mission-foot .state { color: var(--accent); }
+.mission-foot .state.is-done { color: #8fcf9c; }
 
 /* missão em andamento, em destaque */
 .mission.is-featured { grid-column: 1 / -1; border-color: var(--line-2); }
