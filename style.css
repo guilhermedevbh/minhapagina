@@ -655,6 +655,55 @@ strong { color: var(--text); font-weight: 600; }
 }
 .formula span { padding: 4px 8px; color: var(--accent); background: var(--card-2); border: 1px solid var(--line-2); }
 .formula i { font-style: normal; color: var(--dim); }
+
+/* grupos: em andamento e concluídas */
+.mission-block + .mission-block { margin-top: 56px; }
+.mission-block[hidden] { display: none; }
+.mission-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 14px;
+  margin: 0 0 20px;
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: clamp(24px, 3.2vw, 34px);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.mission-group em { font-style: italic; color: var(--accent); }
+.mission-group span {
+  padding: 3px 8px;
+  font-family: var(--f-pixel);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: .06em;
+  color: var(--muted);
+  border: 1px solid var(--line-2);
+}
+
+/* números do projeto */
+.mission-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-bottom: 4px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.mission-stats div { padding: 12px 14px; background: var(--card-2); }
+.mission-stats b {
+  display: block;
+  font-family: var(--f-display);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--accent);
+}
+.mission-stats span { font-family: var(--f-mono); font-size: 11px; line-height: 1.4; color: var(--muted); }
+@media (max-width: 560px) {
+  .mission-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 @media (max-width: 900px) {
   .feature-grid { grid-template-columns: 1fr; }
 }

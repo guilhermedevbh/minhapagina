@@ -107,15 +107,17 @@ const GITHUB_USER = "guilhermedevbh";
       const f = btn.dataset.filter;
       filters.forEach((b) => b.setAttribute("aria-pressed", b === btn));
       missions.forEach((m) => (m.hidden = f !== "all" && !m.dataset.cats.split(" ").includes(f)));
+      // esconde o grupo (em andamento / concluídas) que ficou sem nenhuma missão no filtro
+      $$(".mission-block").forEach((b) => (b.hidden = !$$(".mission", b).some((m) => !m.hidden)));
     })
   );
 
   const views = $$(".view");
-  const grid = $(".missions");
+  const grids = $$(".missions");
   views.forEach((btn) =>
     btn.addEventListener("click", () => {
       views.forEach((b) => b.setAttribute("aria-pressed", b === btn));
-      grid.classList.toggle("is-list", btn.dataset.view === "list");
+      grids.forEach((g) => g.classList.toggle("is-list", btn.dataset.view === "list"));
     })
   );
 

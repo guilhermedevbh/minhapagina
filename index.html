@@ -186,8 +186,8 @@
       <div class="wrap">
         <header class="sec-head" data-reveal>
           <p class="level">level 02</p>
-          <h2 class="sec-title">Missões <em>concluídas</em></h2>
-          <p class="sec-sub">&gt; o que andei construindo</p>
+          <h2 class="sec-title">Missões</h2>
+          <p class="sec-sub">&gt; o que estou construindo e o que já entreguei</p>
         </header>
 
         <div class="toolbar" data-reveal>
@@ -203,11 +203,61 @@
           </div>
         </div>
 
-        <div class="missions">
+        <div class="mission-block">
+          <h3 class="mission-group" data-reveal>Missões <em>em andamento</em> <span>3 missões</span></h3>
+          <div class="missions">
+          <article class="mission is-featured" data-cats="auto" data-reveal>
+            <div class="mission-art" aria-hidden="true">
+              <span class="ghost">Captador NF</span>
+              <span class="mission-chip">01 · em andamento</span>
+            </div>
+            <div class="mission-body">
+              <p class="mission-meta">desktop · c# · fiscal</p>
+              <h3>Captador de Nota Fiscal</h3>
+              <p class="mission-sub">Programa para Windows que baixa e organiza as notas recebidas</p>
+              <p class="mission-desc">Baixa sozinho as notas fiscais recebidas pela empresa usando o certificado digital dela: NFS-e no Portal Nacional e NF-e na SEFAZ. Organiza tudo em pastas por mês e por empresa e gera PDFs e relatórios em um clique. Feito em C#, sem nenhuma biblioteca externa.</p>
+
+              <div class="feature-grid">
+                <div>
+                  <h4>o que ele faz</h4>
+                  <ul class="loot-list">
+                    <li><b>NFS-e:</b> busca no Portal Nacional só as notas novas e salva PDF e XML</li>
+                    <li><b>NF-e:</b> baixa na SEFAZ, registra a ciência da operação e gera o DANFE</li>
+                    <li><b>Organização:</b> pastas e nomes no padrão da empresa, sem baixar a mesma nota duas vezes</li>
+                    <li><b>Consulta:</b> filtros, busca por número, CNPJ ou chave e quadros de totais</li>
+                    <li><b>Relatórios:</b> planilha Excel, relação em PDF e exportação em lote</li>
+                    <li><b>Instalador próprio:</b> instala sem precisar de administrador</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>em números</h4>
+                  <div class="mission-stats">
+                    <div><b>0,7 s</b><span>para abrir as notas (antes 46 s)</span></div>
+                    <div><b>30 mil</b><span>XMLs reais testados</span></div>
+                    <div><b>107/107</b><span>PDFs iguais ao oficial</span></div>
+                    <div><b>14,3 mil</b><span>linhas de C#</span></div>
+                    <div><b>0</b><span>dependências externas</span></div>
+                    <div><b>9</b><span>versões, até a 1.8</span></div>
+                  </div>
+
+                  <h4 class="feature-gap">como foi feito</h4>
+                  <p class="mission-desc">Desenvolvido com IA (Claude Code) a partir das minhas definições: regras fiscais, padrão de pastas e relatórios, testes com certificado e notas reais e a prioridade de cada versão.</p>
+                </div>
+              </div>
+
+              <ul class="tags"><li>c#</li><li>.net 4.8</li><li>windows forms</li><li>rest · soap</li><li>certificado digital</li></ul>
+            </div>
+            <footer class="mission-foot">
+              <span class="state">em andamento <span class="blink">▮</span></span>
+              <span>versão 1.8</span>
+              <span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M6 11h12v10H6zM8.5 11V7.5a3.5 3.5 0 0 1 7 0V11"/></svg>uso interno</span>
+            </footer>
+          </article>
+
           <article class="mission is-featured" data-cats="ia auto" data-reveal>
             <div class="mission-art" aria-hidden="true">
               <span class="ghost">Cadastro Inteligente</span>
-              <span class="mission-chip">04 · em andamento</span>
+              <span class="mission-chip">02 · em andamento</span>
             </div>
             <div class="mission-body">
               <p class="mission-meta">automação · ia · totvs protheus</p>
@@ -247,7 +297,7 @@
           <article class="mission is-featured" data-cats="auto" data-reveal>
             <div class="mission-art" aria-hidden="true">
               <span class="ghost">RevitaCad</span>
-              <span class="mission-chip">05 · em andamento</span>
+              <span class="mission-chip">03 · em andamento</span>
             </div>
             <div class="mission-body">
               <p class="mission-meta">revitalização · cadastros · totvs protheus</p>
@@ -285,7 +335,12 @@
               <span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M6 11h12v10H6zM8.5 11V7.5a3.5 3.5 0 0 1 7 0V11"/></svg>uso interno</span>
             </footer>
           </article>
+          </div>
+        </div>
 
+        <div class="mission-block">
+          <h3 class="mission-group" data-reveal>Missões <em>concluídas</em> <span>3 missões</span></h3>
+          <div class="missions">
           <article class="mission" data-cats="ia auto" data-reveal>
             <div class="mission-art" aria-hidden="true">
               <span class="ghost">Painel Fiscal</span>
@@ -351,6 +406,7 @@
               <a href="https://minhapagina-six.vercel.app/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 17 17 7M9 7h8v8"/></svg>jogar</a>
             </footer>
           </article>
+          </div>
         </div>
 
         <p class="subhead" data-reveal><b>+</b> como eu construo · 5 etapas</p>
